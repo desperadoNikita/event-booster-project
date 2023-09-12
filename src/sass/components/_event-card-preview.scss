@@ -1,0 +1,134 @@
+.gallery__list {
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	display: flex;
+
+	@include bp(tab) {
+		gap: 32px;
+	}
+}
+
+.gallery__div {
+	display: flex;
+	flex-direction: column;
+	width: 130px;
+	padding-top: 9px;
+	padding-right: 10px;
+	position: relative;
+
+	@include bp(tab) {
+		width: 152px;
+		padding-top: 10px;
+		padding-right: 11px;
+	}
+
+	@include bp(desk) {
+		width: 288px;
+		padding-top: 19px;
+		padding-right: 21px;
+	}
+}
+
+.gallery__img {
+	width: 120px;
+	height: 151px;
+	border-radius: 50px 0;
+
+	@include bp(tab) {
+		width: 141px;
+		height: 178px;
+	}
+
+	@include bp(desk) {
+		width: 267px;
+		height: 337px;
+	}
+}
+
+.gallery__pinkBorder {
+	position: absolute;
+	width: 102px;
+	height: 95px;
+	border: 1px solid rgba(220, 86, 197, 0.3);
+	border-radius: 50px 0px;
+	top: 0;
+	right: 0;
+
+	@include bp(tab) {
+		width: 120px;
+		height: 112px;
+	}
+
+	@include bp(desk) {
+		width: 227px;
+		height: 212px;
+	}
+
+	.gallery__list li:nth-child(3n+2) .gallery__div .gallery__link & {
+		z-index: -1;
+	}
+}
+
+
+
+.animation {
+	// transition: all 0.3s ease;
+}
+
+.animation:hover {
+	// transform: scale(1.05);
+}
+
+.event-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.event-heading {
+	color: $accent-color;
+	font-size: $mob-primary-font-size;
+	line-height: calc(17.07/14);
+	font-weight: $bold-font-weight;
+
+	@include bp(tab) {
+		font-size: $primary-font-size;
+		line-height: calc(19.5/16);
+	}
+}
+
+.event-data {
+	color: $primary-text-color;
+	font-size: $mob-primary-font-size;
+	line-height: 1.21;
+	font-weight: 400;
+
+	@include bp(tab) {
+		font-size: $primary-font-size;
+		line-height: calc(19.5/16);
+	}
+
+}
+
+.event-place {
+	color: $primary-text-color;
+	font-size: $mob-primary-font-size;
+	line-height: calc(14.63/12);
+	font-weight: $semibold-font-weight;
+
+	@include bp(tab) {
+		font-size: $primary-font-size;
+		line-height: calc(17.7/14);
+	}
+}
+
+.event-heading {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.event-data {
+	padding-bottom: 8px;
+}
